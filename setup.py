@@ -11,6 +11,7 @@ pkg_version = '0.1.0'
 pkg_url = 'https://github.com/mureth/wowlog-splitter'
 upgrade_code = '2774175E-9188-4C33-9960-0948C66A9718'
 programfiles_dir = 'ProgramFiles64Folder' if distutils.util.get_platform() == 'win-amd64' else 'ProgramFilesFolder'
+icon = 'images/icon.ico'
 
 pkg_includes = ['re']
 
@@ -34,7 +35,7 @@ options = {
 splitter_exe = cx_Freeze.Executable(
     'splitter.py',
     base = base,
-    # icon = icon,
+    icon = icon,
     copyDependentFiles = True,
     shortcutName="WowlogSplitter",
     shortcutDir="DesktopFolder"
